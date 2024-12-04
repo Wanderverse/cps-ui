@@ -15,7 +15,6 @@ const highlightCodeBlocks = require('./_utilities/highlight-code.cjs');
 const tableOfContents = require('./_utilities/table-of-contents.cjs');
 const prettier = require('./_utilities/prettier.cjs');
 const scrollingTables = require('./_utilities/scrolling-tables.cjs');
-const typography = require('./_utilities/typography.cjs');
 const replacer = require('./_utilities/replacer.cjs');
 
 const assetsDir = 'assets';
@@ -145,7 +144,6 @@ module.exports = function (eleventyConfig) {
     highlightCodeBlocks(doc);
     scrollingTables(doc);
     copyCodeButtons(doc); // must be after codePreviews + highlightCodeBlocks
-    typography(doc, '#content');
 
     // Serialize the Document object to an HTML string and prepend the doctype
     content = `<!DOCTYPE html>\n${doc.documentElement.outerHTML}`;

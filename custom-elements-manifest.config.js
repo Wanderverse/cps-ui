@@ -1,6 +1,4 @@
 import * as path from 'path';
-import { customElementJetBrainsPlugin } from 'custom-element-jet-brains-integration';
-import { customElementVsCodePlugin } from 'custom-element-vs-code-integration';
 import { customElementVuejsPlugin } from 'custom-element-vuejs-integration';
 import { parse } from 'comment-parser';
 import { pascalCase } from 'pascal-case';
@@ -196,30 +194,6 @@ export default {
         });
       }
     },
-
-    // Generate custom VS Code data
-    customElementVsCodePlugin({
-      outdir,
-      cssFileName: null,
-      referencesTemplate: (_, tag) => [
-        {
-          name: 'Documentation',
-          url: `https://shoelace.style/components/${tag.replace('sl-', '')}`
-        }
-      ]
-    }),
-
-    customElementJetBrainsPlugin({
-      outdir: './dist',
-      excludeCss: true,
-      packageJson: false,
-      referencesTemplate: (_, tag) => {
-        return {
-          name: 'Documentation',
-          url: `https://shoelace.style/components/${tag.replace('sl-', '')}`
-        };
-      }
-    }),
 
     customElementVuejsPlugin({
       outdir: './dist/types/vue',
