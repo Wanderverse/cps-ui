@@ -27,8 +27,6 @@ module.exports = function (doc, options) {
     const reactCode = adjacentPre?.querySelector('code[class$="react"]');
     const sourceGroupId = `code-preview-source-group-${count}`;
     const isExpanded = code.getAttribute('class').includes(':expanded');
-    const noCodePen = code.getAttribute('class').includes(':no-codepen');
-
     count++;
 
     const htmlButton = `
@@ -110,7 +108,6 @@ module.exports = function (doc, options) {
 
           ${reactCode ? ` ${htmlButton} ${reactButton} ` : ''}
 
-          ${noCodePen ? '' : codePenButton}
         </div>
       </div>
     `;

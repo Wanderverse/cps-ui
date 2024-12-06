@@ -90,22 +90,15 @@
     <aside id="sidebar" data-preserve-scroll>
       <header>
         <a href="/">
-          <img src="{{ assetUrl('images/wordmark.svg') }}" alt="Shoelace" />
+            <img class="only-light" src="{{ assetUrl('images/cps-light.svg') }}" alt="Shoelace" />
+            <img class="only-dark" src="{{ assetUrl('images/cps-dark.svg') }}" alt="Shoelace" />
         </a>
-        <div class="sidebar-version">
-          {{ meta.version }}
-        </div>
+
       </header>
 
       <div class="sidebar-buttons">
         <sl-button size="small" class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace" target="_blank">
           <sl-icon slot="prefix" name="github"></sl-icon> Code
-        </sl-button>
-        <sl-button size="small" class="repo-button repo-button--star" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
-          <sl-icon slot="prefix" name="star-fill"></sl-icon> Star
-        </sl-button>
-        <sl-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
-          <sl-icon slot="prefix" name="twitter"></sl-icon> Follow
         </sl-button>
       </div>
 

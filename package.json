@@ -1,8 +1,8 @@
 {
-  "name": "@shoelace-style/shoelace",
-  "description": "A forward-thinking library of web components.",
+  "name": "coaxium-ui-library",
+  "description": "web component library",
   "version": "1.0.0",
-  "homepage": "https://github.com/shoelace-style/shoelace",
+  "homepage": "#",
   "author": "Thien Nguyen",
   "customElements": "dist/custom-elements.json",
   "web-types": "./dist/web-types.json",
