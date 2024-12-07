@@ -8,8 +8,6 @@ toc: false
 <div class="splash">
 <div class="splash-start">
 
-# <sl-visually-hidden>Shoelace:</sl-visually-hidden> A forward-thinking library of web components.
-
 - Works with all frameworks 🧩
 - Works with CDNs 🚛
 - Fully customizable with CSS 🎨
