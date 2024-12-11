@@ -99,7 +99,7 @@ async function buildTheSource() {
       // The whole shebang
       './src/shoelace.ts',
       // The auto-loader
-      './src/shoelace-autoloader.ts',
+      './src/coaxium-autoloader.ts',
       // Components
       ...(await globby('./src/components/**/!(*.(style|test)).ts')),
       // Translations
