@@ -28,8 +28,8 @@ Add the following code to your page.
 
 <!-- prettier-ignore -->
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/coaxium-ui-library-test@%VERSION%/%CDNDIR%/themes/light.css" />
-<script type="module" src="https://cdn.jsdelivr.net/npm/coaxium-ui-library-test@%VERSION%/%CDNDIR%/coaxium-autoloader.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/coaxium-ui-library@%VERSION%/%CDNDIR%/themes/light.css" />
+<script type="module" src="https://cdn.jsdelivr.net/npm/coaxium-ui-library@%VERSION%/%CDNDIR%/coaxium-autoloader.js"></script>
 ```
 
 Now you have access to all of Shoelace's components! Try adding a button:
