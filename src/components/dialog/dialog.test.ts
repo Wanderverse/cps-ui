@@ -148,7 +148,6 @@ describe('<sl-dialog>', () => {
     expect(el.open).to.be.false;
   });
 
-  // https://github.com/shoelace-style/shoelace/issues/1382
   it('should properly cycle through tabbable elements when sl-dialog is used in a shadowRoot', async () => {
     class AContainer extends LitElement {
       get dialog() {

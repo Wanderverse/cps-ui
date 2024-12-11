@@ -39,7 +39,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shoelace-style/shoelace.git"
+    "url": "git+https://github.com/skipdisk/coaxium-ui-library.git"
   },
   "scripts": {
     "start": "node scripts/build.js --serve",

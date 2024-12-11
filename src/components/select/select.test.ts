@@ -208,7 +208,6 @@ describe('<sl-select>', () => {
     });
 
     // this can happen in on ms-edge autofilling an associated input element in the same form
-    // https://github.com/shoelace-style/shoelace/issues/2117
     it('should not throw on incomplete events', async () => {
       const el = await fixture<SlSelect>(html`
         <sl-select required>
@@ -741,9 +740,6 @@ describe('<sl-select>', () => {
       });
     });
 
-    /**
-     * @see {https://github.com/shoelace-style/shoelace/issues/2254}
-     */
     it('Should account for if `value` changed before connecting', async () => {
       const select = await fixture<SlSelect>(html`
         <sl-select label="Search By" multiple clearable .value=${['foo', 'bar']}>
@@ -758,9 +754,6 @@ describe('<sl-select>', () => {
       expect(select.value).to.deep.equal(['foo', 'bar']);
     });
 
-    /**
-     * @see {https://github.com/shoelace-style/shoelace/issues/2254}
-     */
     it('Should still work if using the value attribute', async () => {
       const select = await fixture<SlSelect>(html`
         <sl-select label="Search By" multiple clearable value="foo bar">

@@ -722,7 +722,6 @@ If you want to change the icons Shoelace uses internally, you can register an ic
         list.appendChild(item);
 
         // Wrap it with a tooltip the first time the mouse lands on it. We do this instead of baking them into the DOM
-        // to improve this page's performance. See: https://github.com/shoelace-style/shoelace/issues/1122
         item.addEventListener('mouseover', () => wrapWithTooltip(item), { once: true });
 
         // Copy on click

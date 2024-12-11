@@ -393,7 +393,6 @@ export default class SlPopup extends ShoelaceElement {
     //
     // Use custom positioning logic if the strategy is absolute. Otherwise, fall back to the default logic.
     //
-    // More info: https://github.com/shoelace-style/shoelace/issues/1135
     //
     const getOffsetParent =
       this.strategy === 'absolute'

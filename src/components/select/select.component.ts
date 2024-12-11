@@ -242,8 +242,6 @@ export default class SlSelect extends ShoelaceElement implements ShoelaceFormCon
     //
     // Listen on the root node instead of the document in case the elements are inside a shadow root
     //
-    // https://github.com/shoelace-style/shoelace/issues/1763
-    //
     document.addEventListener('focusin', this.handleDocumentFocusIn);
     document.addEventListener('keydown', this.handleDocumentKeyDown);
     document.addEventListener('mousedown', this.handleDocumentMouseDown);

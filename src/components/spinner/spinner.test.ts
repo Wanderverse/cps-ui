@@ -22,9 +22,7 @@ describe('<sl-spinner>', () => {
       //
       // This matrix is the computed value when using `transform: rotate(x)` on the indicator. When using `rotate: x`,
       // it will be "none" instead.
-      //
-      // Related: https://github.com/shoelace-style/shoelace/issues/1121
-      //
+
       expect(getComputedStyle(indicator).transform).to.equal('matrix(1, 0, 0, 1, 0, 0)');
     });
 

@@ -101,7 +101,3 @@ Now you can use the `v-sl-model` directive to keep your data in sync!
 ```html
 <sl-input v-sl-model="name"></sl-input>
 ```
-
-:::tip
-Are you using Shoelace with Vue? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/vue-2.md)
-:::

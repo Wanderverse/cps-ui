@@ -55,13 +55,4 @@ markdown.use(markdownItContainer, 'details', {
   }
 });
 
-// Replace [#1234] with a link to GitHub issues
-markdownItReplaceIt.replacements.push({
-  name: 'github-issues',
-  re: /\[#([0-9]+)\]/gs,
-  sub: '<a href="https://github.com/shoelace-style/shoelace/issues/$1">#$1</a>',
-  html: true,
-  default: true
-});
-
 module.exports = markdown;
