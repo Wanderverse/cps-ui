@@ -1,15 +1,3 @@
-# Coaxium-ui-library
-
-- Works with all frameworks 🧩
-- Works with CDNs 🚛
-- Fully customizable with CSS 🎨
-- Includes an official dark theme 🌛
-- Built with accessibility in mind ♿️
-
-### How was Coaxium built?
-
-Components are built with [LitElement](https://lit-element.polymer-project.org/), a custom elements base class that provides an intuitive API and reactive data binding. The build is a custom script with bundling powered by [esbuild](https://esbuild.github.io/).
-
 ### Quick Start
 
 ```bash
