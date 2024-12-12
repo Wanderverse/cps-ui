@@ -64,7 +64,7 @@
     });
   }
 
-  const shoelaceVersion = document.documentElement.getAttribute('data-shoelace-version');
+  const shoelaceVersion = document.documentElement.getAttribute('data-coaxium-version');
   const reactVersion = '^18';
   const cdndir = 'cdn';
   const npmdir = 'dist';
@@ -73,7 +73,7 @@
 
   // We need the version to open
   if (!shoelaceVersion) {
-    throw new Error('The data-shoelace-version attribute is missing from <html>.');
+    throw new Error('The data-coaxium-version attribute is missing from <html>.');
   }
 
   // Sync flavor UI on page load
