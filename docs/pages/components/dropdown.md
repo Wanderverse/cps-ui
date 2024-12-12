@@ -33,12 +33,12 @@ Dropdowns are designed to work well with [menus](/components/menu) to provide a 
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlIcon from '@shoelace-style/shoelace/dist/react/icon';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlIcon from 'coaxium-ui-library-pilot/dist/react/icon';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => (
   <SlDropdown>
@@ -98,10 +98,10 @@ When dropdowns are used with [menus](/components/menu), you can listen for the [
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => {
   function handleSelect(event) {
@@ -151,10 +151,10 @@ Alternatively, you can listen for the `click` event on individual menu items. No
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => {
   function handleCut() {
@@ -203,11 +203,11 @@ The preferred placement of the dropdown can be set with the `placement` attribut
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => (
   <SlDropdown placement="top-start">
@@ -245,11 +245,11 @@ The distance from the panel to the trigger can be customized using the `distance
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => (
   <SlDropdown distance={30}>
@@ -287,11 +287,11 @@ The offset of the panel along the trigger can be customized using the `skidding`
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => (
   <SlDropdown skidding={30}>
@@ -347,11 +347,11 @@ To create a submenu, nest an `<sl-menu slot="submenu">` element in a [menu item]
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const css = `
   .dropdown-hoist {
@@ -436,11 +436,11 @@ Dropdown panels will be clipped if they're inside a container that has `overflow
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const css = `
   .dropdown-hoist {

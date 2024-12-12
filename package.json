@@ -7,15 +7,15 @@
   "customElements": "dist/custom-elements.json",
   "web-types": "./dist/web-types.json",
   "type": "module",
-  "types": "dist/shoelace.d.ts",
+  "types": "dist/coaxium.d.ts",
   "jsdelivr": "./cdn/coaxium-autoloader.js",
   "exports": {
     ".": {
-      "types": "./dist/shoelace.d.ts",
-      "import": "./dist/shoelace.js"
+      "types": "./dist/coaxium.d.ts",
+      "import": "./dist/coaxium.js"
     },
     "./dist/custom-elements.json": "./dist/custom-elements.json",
-    "./dist/shoelace.js": "./dist/shoelace.js",
+    "./dist/coaxium.js": "./dist/coaxium.js",
     "./dist/coaxium-autoloader.js": "./dist/coaxium-autoloader.js",
     "./dist/themes": "./dist/themes",
     "./dist/themes/*": "./dist/themes/*",

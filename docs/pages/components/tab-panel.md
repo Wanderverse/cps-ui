@@ -20,9 +20,9 @@ layout: component
 ```
 
 ```jsx:react
-import SlTab from '@shoelace-style/shoelace/dist/react/tab';
-import SlTabGroup from '@shoelace-style/shoelace/dist/react/tab-group';
-import SlTabPanel from '@shoelace-style/shoelace/dist/react/tab-panel';
+import SlTab from 'coaxium-ui-library-pilot/dist/react/tab';
+import SlTabGroup from 'coaxium-ui-library-pilot/dist/react/tab-group';
+import SlTabPanel from 'coaxium-ui-library-pilot/dist/react/tab-panel';
 
 const App = () => (
   <SlTabGroup>

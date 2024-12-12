@@ -22,9 +22,9 @@ You can use [menu items](/components/menu-item), [menu labels](/components/menu-
 {% raw %}
 
 ```jsx:react
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => (
   <SlMenu style={{ maxWidth: '200px' }}>
@@ -63,10 +63,10 @@ Menus work really well when used inside [dropdowns](/components/dropdown).
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlDropdown from '@shoelace-style/shoelace/dist/react/dropdown';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlDropdown from 'coaxium-ui-library-pilot/dist/react/dropdown';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => (
   <SlDropdown>
@@ -115,9 +115,9 @@ To create a submenu, nest an `<sl-menu slot="submenu">` in any [menu item](/comp
 {% raw %}
 
 ```jsx:react
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => (
   <SlMenu style={{ maxWidth: '200px' }}>

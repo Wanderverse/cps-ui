@@ -10,7 +10,7 @@ layout: component
 ```
 
 ```jsx:react
-import SlCheckbox from '@shoelace-style/shoelace/dist/react/checkbox';
+import SlCheckbox from 'coaxium-ui-library-pilot/dist/react/checkbox';
 
 const App = () => <SlCheckbox>Checkbox</SlCheckbox>;
 ```
@@ -30,7 +30,7 @@ Use the `checked` attribute to activate the checkbox.
 ```
 
 ```jsx:react
-import SlCheckbox from '@shoelace-style/shoelace/dist/react/checkbox';
+import SlCheckbox from 'coaxium-ui-library-pilot/dist/react/checkbox';
 
 const App = () => <SlCheckbox checked>Checked</SlCheckbox>;
 ```
@@ -44,7 +44,7 @@ Use the `indeterminate` attribute to make the checkbox indeterminate.
 ```
 
 ```jsx:react
-import SlCheckbox from '@shoelace-style/shoelace/dist/react/checkbox';
+import SlCheckbox from 'coaxium-ui-library-pilot/dist/react/checkbox';
 
 const App = () => <SlCheckbox indeterminate>Indeterminate</SlCheckbox>;
 ```
@@ -58,7 +58,7 @@ Use the `disabled` attribute to disable the checkbox.
 ```
 
 ```jsx:react
-import SlCheckbox from '@shoelace-style/shoelace/dist/react/checkbox';
+import SlCheckbox from 'coaxium-ui-library-pilot/dist/react/checkbox';
 
 const App = () => <SlCheckbox disabled>Disabled</SlCheckbox>;
 ```
@@ -76,7 +76,7 @@ Use the `size` attribute to change a checkbox's size.
 ```
 
 ```jsx:react
-import SlCheckbox from '@shoelace-style/shoelace/dist/react/checkbox';
+import SlCheckbox from 'coaxium-ui-library-pilot/dist/react/checkbox';
 
 const App = () => (
   <>
@@ -98,7 +98,7 @@ Add descriptive help text to a switch with the `help-text` attribute. For help t
 ```
 
 ```jsx:react
-import SlCheckbox from '@shoelace-style/shoelace/dist/react/checkbox';
+import SlCheckbox from 'coaxium-ui-library-pilot/dist/react/checkbox';
 
 const App = () => <SlCheckbox help-text="What should the user know about the switch?">Label</SlCheckbox>;
 ```
@@ -141,8 +141,8 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 
 ```jsx:react
 import { useEffect, useRef } from 'react';
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlCheckbox from '@shoelace-style/shoelace/dist/react/checkbox';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlCheckbox from 'coaxium-ui-library-pilot/dist/react/checkbox';
 
 const App = () => {
   const checkbox = useRef(null);

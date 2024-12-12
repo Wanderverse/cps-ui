@@ -1,4 +1,4 @@
-import '../../../dist/shoelace.js';
+import '../../../dist/coaxium.js';
 import { clickOnElement } from '../../internal/test.js';
 import { expect, fixture } from '@open-wc/testing';
 import { html } from 'lit';

@@ -1,4 +1,4 @@
-import '../../../dist/shoelace.js';
+import '../../../dist/coaxium.js';
 import { aTimeout, expect, fixture, html } from '@open-wc/testing';
 import type SlOption from './option.js';
 

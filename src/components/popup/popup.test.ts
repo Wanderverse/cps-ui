@@ -1,4 +1,4 @@
-import '../../../dist/shoelace.js';
+import '../../../dist/coaxium.js';
 import { expect, fixture, html } from '@open-wc/testing';
 import type SlPopup from './popup.js';
 

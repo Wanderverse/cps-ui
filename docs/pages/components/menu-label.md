@@ -22,10 +22,10 @@ layout: component
 {% raw %}
 
 ```jsx:react
-import SlDivider from '@shoelace-style/shoelace/dist/react/divider';
-import SlMenu from '@shoelace-style/shoelace/dist/react/menu';
-import SlMenuLabel from '@shoelace-style/shoelace/dist/react/menu-label';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
+import SlDivider from 'coaxium-ui-library-pilot/dist/react/divider';
+import SlMenu from 'coaxium-ui-library-pilot/dist/react/menu';
+import SlMenuLabel from 'coaxium-ui-library-pilot/dist/react/menu-label';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
 
 const App = () => (
   <SlMenu style={{ maxWidth: '200px' }}>

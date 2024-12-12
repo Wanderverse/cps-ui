@@ -1,4 +1,4 @@
-import '../../../dist/shoelace.js';
+import '../../../dist/coaxium.js';
 // cspell:dictionaries lorem-ipsum
 import { aTimeout, elementUpdated, expect, fixture, waitUntil } from '@open-wc/testing';
 import { html, LitElement } from 'lit';
