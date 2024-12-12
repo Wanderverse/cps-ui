@@ -1,17 +1,17 @@
 ---
 meta:
   title: Form Controls
-  description: Some things to note about Shoelace and forms.
+  description: Some things to note about Coaxium and forms.
 ---
 
 # Form Controls
 
-Every Shoelace component makes use of a [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) to encapsulate markup, styles, and behavior. One caveat of this approach is that native `<form>` elements do not recognize form controls located inside a shadow root.
+Every Coaxium component makes use of a [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) to encapsulate markup, styles, and behavior. One caveat of this approach is that native `<form>` elements do not recognize form controls located inside a shadow root.
 
-Shoelace solves this problem by using the [`formdata`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event) event, which is [available in all modern browsers](https://caniuse.com/mdn-api_htmlformelement_formdata_event). This means, when a form is submitted, Shoelace form controls will automatically append their values to the `FormData` object that's used to submit the form. In most cases, things will "just work." However, if you're using a form serialization library, it might need to be adapted to recognize Shoelace form controls.
+Coaxium solves this problem by using the [`formdata`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event) event, which is [available in all modern browsers](https://caniuse.com/mdn-api_htmlformelement_formdata_event). This means, when a form is submitted, Coaxium form controls will automatically append their values to the `FormData` object that's used to submit the form. In most cases, things will "just work." However, if you're using a form serialization library, it might need to be adapted to recognize Coaxium form controls.
 
 :::tip
-Shoelace uses event listeners to intercept the form's `formdata` and `submit` events. This allows it to inject data and trigger validation as necessary. If you're also attaching an event listener to the form, _you must attach it after Shoelace form controls are connected to the DOM_, otherwise your logic will run before Shoelace has a chance to inject form data and validate form controls.
+Coaxium uses event listeners to intercept the form's `formdata` and `submit` events. This allows it to inject data and trigger validation as necessary. If you're also attaching an event listener to the form, _you must attach it after Coaxium form controls are connected to the DOM_, otherwise your logic will run before Coaxium has a chance to inject form data and validate form controls.
 :::
 
 ## Data Serialization
@@ -27,10 +27,10 @@ const data = new FormData(form);
 // All form control data is available in a FormData object
 ```
 
-However, some folks find `FormData` tricky to work with or they need to pass a JSON payload to their server. To accommodate this, Shoelace offers a serialization utility that gathers form data and returns a simple JavaScript object instead.
+However, some folks find `FormData` tricky to work with or they need to pass a JSON payload to their server. To accommodate this, Coaxium offers a serialization utility that gathers form data and returns a simple JavaScript object instead.
 
 ```js
-import { serialize } from '@shoelace-style/shoelace/dist/utilities/form.js';
+import { serialize } from 'coaxium-ui-library-pilot/dist/utilities/form.js';
 
 const form = document.querySelector('form');
 const data = serialize(form);
@@ -42,7 +42,7 @@ This results in an object with name/value pairs that map to each form control. I
 
 ## Constraint Validation
 
-Client-side validation can be enabled through the browser's [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) for Shoelace form controls. You can activate it using attributes such as `required`, `pattern`, `minlength`, `maxlength`, etc. Shoelace implements many of the same attributes as native form controls, but check the documentation for a list of supported properties for each component.
+Client-side validation can be enabled through the browser's [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) for Coaxium form controls. You can activate it using attributes such as `required`, `pattern`, `minlength`, `maxlength`, etc. Coaxium implements many of the same attributes as native form controls, but check the documentation for a list of supported properties for each component.
 
 If you don't want to use client-side validation, you can suppress this behavior by adding `novalidate` to the surrounding `<form>` element.
 
@@ -99,12 +99,12 @@ The form will not be submitted if a required field is incomplete.
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlCheckbox from '@shoelace-style/shoelace/dist/react/checkbox';
-import SlInput from '@shoelace-style/shoelace/dist/react/input';
-import SlMenuItem from '@shoelace-style/shoelace/dist/react/menu-item';
-import SlSelect from '@shoelace-style/shoelace/dist/react/select';
-import SlTextarea from '@shoelace-style/shoelace/dist/react/textarea';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlCheckbox from 'coaxium-ui-library-pilot/dist/react/checkbox';
+import SlInput from 'coaxium-ui-library-pilot/dist/react/input';
+import SlMenuItem from 'coaxium-ui-library-pilot/dist/react/menu-item';
+import SlSelect from 'coaxium-ui-library-pilot/dist/react/select';
+import SlTextarea from 'coaxium-ui-library-pilot/dist/react/textarea';
 
 const App = () => {
   function handleSubmit(event) {
@@ -165,8 +165,8 @@ To restrict a value to a specific [pattern](https://developer.mozilla.org/en-US/
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlInput from '@shoelace-style/shoelace/dist/react/input';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlInput from 'coaxium-ui-library-pilot/dist/react/input';
 
 const App = () => {
   function handleSubmit(event) {
@@ -217,8 +217,8 @@ Some input types will automatically trigger constraints, such as `email` and `ur
 ```
 
 ```jsx:react
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlInput from '@shoelace-style/shoelace/dist/react/input';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlInput from 'coaxium-ui-library-pilot/dist/react/input';
 
 const App = () => {
   function handleSubmit(event) {
@@ -246,7 +246,7 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
 
 ```html:preview
 <form class="input-validation-custom">
-  <sl-input label="Type “shoelace”" required></sl-input>
+  <sl-input label="Type “coaxium”" required></sl-input>
   <br />
   <sl-button type="submit" variant="primary">Submit</sl-button>
   <sl-button type="reset" variant="default">Reset</sl-button>
@@ -267,10 +267,10 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
     });
 
     input.addEventListener('sl-input', () => {
-      if (input.value === 'shoelace') {
+      if (input.value === 'coaxium') {
         input.setCustomValidity('');
       } else {
-        input.setCustomValidity("Hey, you're supposed to type 'shoelace' before submitting this!");
+        input.setCustomValidity("Hey, you're supposed to type 'coaxium' before submitting this!");
       }
     });
   });
@@ -279,8 +279,8 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
 
 ```jsx:react
 import { useRef, useState } from 'react';
-import SlButton from '@shoelace-style/shoelace/dist/react/button';
-import SlInput from '@shoelace-style/shoelace/dist/react/input';
+import SlButton from 'coaxium-ui-library-pilot/dist/react/button';
+import SlInput from 'coaxium-ui-library-pilot/dist/react/input';
 
 const App = () => {
   const input = useRef(null);
@@ -289,10 +289,10 @@ const App = () => {
   function handleInput(event) {
     setValue(event.target.value);
 
-    if (event.target.value === 'shoelace') {
+    if (event.target.value === 'coaxium') {
       input.current.setCustomValidity('');
     } else {
-      input.current.setCustomValidity("Hey, you're supposed to type 'shoelace' before submitting this!");
+      input.current.setCustomValidity("Hey, you're supposed to type 'coaxium' before submitting this!");
     }
   }
 
@@ -303,7 +303,7 @@ const App = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <SlInput ref={input} label="Type 'shoelace'" required value={value} onSlInput={handleInput} />
+      <SlInput ref={input} label="Type 'coaxium'" required value={value} onSlInput={handleInput} />
       <br />
       <SlButton type="submit" variant="primary">
         Submit
@@ -319,7 +319,7 @@ Custom validation can be applied to any form control that supports the `setCusto
 
 ## Custom Validation Styles
 
-Due to the many ways form controls are used, Shoelace doesn't provide out of the box validation styles for form controls as part of its default theme. Instead, the following attributes will be applied to reflect a control's validity as users interact with it. You can use them to create custom styles for any of the validation states you're interested in.
+Due to the many ways form controls are used, Coaxium doesn't provide out of the box validation styles for form controls as part of its default theme. Instead, the following attributes will be applied to reflect a control's validity as users interact with it. You can use them to create custom styles for any of the validation states you're interested in.
 
 - `data-required` - the form control is required
 - `data-optional` - the form control is optional
@@ -331,7 +331,7 @@ Due to the many ways form controls are used, Shoelace doesn't provide out of the
 These attributes map to the browser's built-in pseudo classes for validation: [`:required`](https://developer.mozilla.org/en-US/docs/Web/CSS/:required), [`:optional`](https://developer.mozilla.org/en-US/docs/Web/CSS/:optional), [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid), [`:valid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:valid), and the proposed [`:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid) and [`:user-valid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-valid).
 
 :::tip
-In the future, data attributes will be replaced with custom pseudo classes such as `:--valid` and `:--invalid`. Shoelace is using data attributes as a workaround until browsers support custom states through [`ElementInternals.states`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/states).
+In the future, data attributes will be replaced with custom pseudo classes such as `:--valid` and `:--invalid`. Coaxium is using data attributes as a workaround until browsers support custom states through [`ElementInternals.states`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/states).
 :::
 
 ### Styling Invalid Form Controls
@@ -442,7 +442,7 @@ This example demonstrates custom validation styles using `data-user-invalid` and
 
 ## Inline Form Validation
 
-By default, Shoelace form controls use the browser's tooltip-style error messages. No mechanism is provided to show errors inline, as there are too many opinions on how that would work when combined with native form controls and other custom elements. You can, however, implement your own solution using the following technique.
+By default, Coaxium form controls use the browser's tooltip-style error messages. No mechanism is provided to show errors inline, as there are too many opinions on how that would work when combined with native form controls and other custom elements. You can, however, implement your own solution using the following technique.
 
 To disable the browser's error messages, you need to cancel the `sl-invalid` event. Then you can apply your own inline validation errors. This example demonstrates a primitive way to do this.
 
@@ -554,10 +554,10 @@ This example is meant to demonstrate the concept of providing your own error mes
 
 ## Getting Associated Form Controls
 
-At this time, using [`HTMLFormElement.elements`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements) will not return Shoelace form controls because the browser is unaware of their status as custom element form controls. Fortunately, Shoelace provides an `elements()` function that does something very similar. However, instead of returning an [`HTMLFormControlsCollection`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection), it returns an array of HTML and Shoelace form controls in the order they appear in the DOM.
+At this time, using [`HTMLFormElement.elements`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements) will not return Coaxium form controls because the browser is unaware of their status as custom element form controls. Fortunately, Coaxium provides an `elements()` function that does something very similar. However, instead of returning an [`HTMLFormControlsCollection`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection), it returns an array of HTML and Shoelace form controls in the order they appear in the DOM.
 
 ```js
-import { getFormControls } from '@shoelace-style/shoelace/dist/utilities/form.js';
+import { getFormControls } from 'coaxium-ui-library-pilot/dist/utilities/form.js';
 
 const form = document.querySelector('#my-form');
 const formControls = getFormControls(form);

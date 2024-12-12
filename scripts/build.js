@@ -97,7 +97,7 @@ async function buildTheSource() {
       // NOTE: Entry points must be mapped in package.json > exports, otherwise users won't be able to import them!
       //
       // The whole shebang
-      './src/shoelace.ts',
+      './src/coaxium.ts',
       // The auto-loader
       './src/coaxium-autoloader.ts',
       // Components
