@@ -1,33 +1,33 @@
 ---
 meta:
   title: React
-  description: Tips for using Shoelace in your React app.
+  description: Tips for using Coaxium in your React app.
 ---
 
 # React
 
-Shoelace offers a React version of every component to provide an idiomatic experience for React users. You can easily toggle between HTML and React examples throughout the documentation.
+Coaxium offers a React version of every component to provide an idiomatic experience for React users. You can easily toggle between HTML and React examples throughout the documentation.
 
 ## Installation
 
-To add Shoelace to your React app, install the package from npm.
+To add Coaxium to your React app, install the package from npm.
 
 ```bash
-npm install @shoelace-style/shoelace
+npm install coaxium-ui-library-pilot
 ```
 
 Next, [include a theme](/getting-started/themes) and set the [base path](/getting-started/installation#setting-the-base-path) for icons and other assets. In this example, we'll import the light theme and use the CDN as a base path.
 
 ```jsx
 // App.jsx
-import '@shoelace-style/shoelace/%NPMDIR%/themes/light.css';
-import { setBasePath } from '@shoelace-style/shoelace/%NPMDIR%/utilities/base-path';
+import 'coaxium-ui-library-pilot/%NPMDIR%/themes/light.css';
+import { setBasePath } from 'coaxium-ui-library-pilot/%NPMDIR%/utilities/base-path';
 
-setBasePath('https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/%CDNDIR%/');
+setBasePath('https://cdn.jsdelivr.net/npm/coaxium-ui-library-pilot@%VERSION%/%CDNDIR%/');
 ```
 
 :::tip
-If you'd rather not use the CDN for assets, you can create a [build task](https://webpack.js.org/plugins/copy-webpack-plugin/) that copies `node_modules/@shoelace-style/shoelace/%NPMDIR%/assets` into your app's `public` directory. Then you can point the base path to that folder instead.
+If you'd rather not use the CDN for assets, you can create a [build task](https://webpack.js.org/plugins/copy-webpack-plugin/) that copies `node_modules/coaxium-ui-library-pilot/%NPMDIR%/assets` into your app's `public` directory. Then you can point the base path to that folder instead.
 :::
 
 Now you can start using components!
@@ -40,10 +40,10 @@ Preact users facing type errors using components may benefit from setting "paths
 
 ### Importing Components
 
-Every Shoelace component is available to import as a React component. Note that we're importing the `<SlButton>` _React component_ instead of the `<sl-button>` _custom element_ in the example below.
+Every Coaxium component is available to import as a React component. Note that we're importing the `<SlButton>` _React component_ instead of the `<sl-button>` _custom element_ in the example below.
 
 ```jsx
-import SlButton from '@shoelace-style/shoelace/%NPMDIR%/react/button';
+import SlButton from 'coaxium-ui-library-pilot/%NPMDIR%/react/button';
 
 const MyComponent = () => <SlButton variant="primary">Click me</SlButton>;
 
@@ -55,27 +55,27 @@ export default MyComponent;
 Previously, it was recommended to import from a single entrypoint like so:
 
 ```jsx
-import { SlButton } from '@shoelace-style/shoelace/%NPMDIR%/react';
+import { SlButton } from 'coaxium-ui-library-pilot/%NPMDIR%/react';
 ```
 
-However, tree-shaking extra Shoelace components proved to be a challenge. As a result, we now recommend cherry-picking components you want to use, rather than importing from a single entrypoint.
+However, tree-shaking extra Coaxium components proved to be a challenge. As a result, we now recommend cherry-picking components you want to use, rather than importing from a single entrypoint.
 
 ```diff
-- import { SlButton } from '@shoelace-style/shoelace/%NPMDIR%/react';
-+ import SlButton from '@shoelace-style/shoelace/%NPMDIR%/react/button';
+- import { SlButton } from 'coaxium-ui-library-pilot/%NPMDIR%/react';
++ import SlButton from 'coaxium-ui-library-pilot/%NPMDIR%/react/button';
 ```
 
 You can find a copy + paste import for each component in the "importing" section of its documentation.
 
 ### Event Handling
 
-Many Shoelace components emit [custom events](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). For example, the [input component](/components/input) emits the `sl-input` event when it receives input. In React, you can listen for the event using `onSlInput`.
+Many Coaxium components emit [custom events](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). For example, the [input component](/components/input) emits the `sl-input` event when it receives input. In React, you can listen for the event using `onSlInput`.
 
 Here's how you can bind the input's value to a state variable.
 
 ```jsx
 import { useState } from 'react';
-import SlInput from '@shoelace-style/shoelace/%NPMDIR%/react/input';
+import SlInput from 'coaxium-ui-library-pilot/%NPMDIR%/react/input';
 
 function MyComponent() {
   const [value, setValue] = useState('');
@@ -90,8 +90,8 @@ If you're using TypeScript, it's important to note that `event.target` will be a
 
 ```tsx
 import { useState } from 'react';
-import SlInput from '@shoelace-style/shoelace/%NPMDIR%/react/input';
-import type SlInputElement from '@shoelace-style/shoelace/%NPMDIR%/components/input/input';
+import SlInput from 'coaxium-ui-library-pilot/%NPMDIR%/react/input';
+import type SlInputElement from 'coaxium-ui-library-pilot/%NPMDIR%/components/input/input';
 
 function MyComponent() {
   const [value, setValue] = useState('');
@@ -106,8 +106,8 @@ You can also import the event type for use in your callbacks, shown below.
 
 ```tsx
 import { useCallback, useState } from 'react';
-import SlInput, { type SlInputEvent } from '@shoelace-style/shoelace/%NPMDIR%/react/input';
-import type SlInputElement from '@shoelace-style/shoelace/%NPMDIR%/components/input/input';
+import SlInput, { type SlInputEvent } from 'coaxium-ui-library-pilot/%NPMDIR%/react/input';
+import type SlInputElement from 'coaxium-ui-library-pilot/%NPMDIR%/components/input/input';
 
 function MyComponent() {
   const [value, setValue] = useState('');
@@ -125,7 +125,7 @@ export default MyComponent;
 
 Testing with web components can be challenging if your test environment runs in a Node environment (i.e. it doesn't run in a real browser). Fortunately, [Jest](https://jestjs.io/) has made a number of strides to support web components and provide additional browser APIs. However, it's still not a complete replication of a browser environment.
 
-Here are some tips that will help smooth things over if you're having trouble with Jest + Shoelace.
+Here are some tips that will help smooth things over if you're having trouble with Jest + Coaxium.
 
 :::tip
 If you're looking for a fast, modern testing alternative, consider [Web Test Runner](https://modern-web.dev/docs/test-runner/overview/).
@@ -167,13 +167,13 @@ For more details, refer to Jest's [manual mocking](https://jestjs.io/docs/manual
 
 ### Transform ES Modules
 
-ES Modules are a [well-supported browser standard](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/). This is how Shoelace is distributed, but most React apps expect CommonJS. As a result, you'll probably run into the following error.
+ES Modules are a [well-supported browser standard](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/). This is how Coaxium is distributed, but most React apps expect CommonJS. As a result, you'll probably run into the following error.
 
 ```
 Error: Unable to import outside of a module
 ```
 
-To fix this, add the following to your `package.json` which tells the transpiler to process Shoelace modules.
+To fix this, add the following to your `package.json` which tells the transpiler to process Coaxium modules.
 
 ```js
 {
